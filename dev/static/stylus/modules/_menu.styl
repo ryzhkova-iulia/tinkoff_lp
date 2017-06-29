@@ -4,6 +4,7 @@
 
 .menu
   text-align justify
+
   &:after
     content ""
     width 100%
@@ -14,9 +15,12 @@
   li
     display inline-block
     vertical-align top
+    margin-bottom -16px
   &__item
     color #FFFFFF
     display inline-block
     padding 25px 0
+    border-bottom 3px solid #3e4757
+    transition border-bottom 300ms
     &:hover
-      border-bottom 2px solid #ffdd2d
+      border-bottom 3px solid #ffdd2d

@@ -1,7 +1,25 @@
 extends ../layout/main
 
 block title
-	| Главная страница
+    | Главная страница
 
 block content
-	include ../modules/menu
+    include ../modules/menu
+
+    section.banner.clearfix
+        .content
+            .info
+                h1.main-title Карты для вас  прямо сейчас
+                span.subtitle Выбирайте карту, пользуйтесь <br> удобными сервисами
+                button.btn.btn_absolute Оформить заявку
+    section.container
+        .content.content_align
+            .block
+                h2.block__title Любые категории  платежей
+                .category
+                    .category__item Кафе
+                        img(src="./static/img/general/close.svg")
+
+            .block
+            .block
+                h2.block__title Любые категории  платежей

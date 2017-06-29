@@ -1,0 +1,70 @@
+.banner
+  position relative
+  background  linear-gradient(to right, #1489e7, #003e82)
+  color #FFFFFF
+  padding 83px 0
+  z-index 100
+  height 373px
+  overflow: hidden
+  &:before
+    content ''
+    position absolute
+    top 0
+    left 0
+    background  url("../img/general/bitmap.png") no-repeat left
+    z-index -1
+    display block
+    background-size: cover
+    width 100%
+    max-width 542px
+    height 100%
+
+
+.main-title
+  font-size 50px
+  font-weight 100
+  line-height 1.1em
+
+.subtitle
+  font-size 16px
+  line-height 1.5em
+  margin-top 10px
+  margin-bottom 20px
+  display block
+
+.info
+  width 50%
+  float right
+  z-index 300
+
+.block
+  display inline-block
+  width 33%
+  padding 18px
+  vertical-align top
+  &__title
+    font-size 28px
+    font-weight: 300;
+    text-align: center;
+    color: #333333;
+
+.container
+  padding 55px 0
+
+
+.category
+  border-radius: 6px;
+  border: solid 1px #dddfe0;
+  max-width 252px
+  color #333333
+  padding 18px
+  margin-top 30px
+  &__item
+    background-color #eef2f7
+    font-size 13px
+    display  inline-block
+    padding 14px 10px
+    border-radius 6px
+    img
+      margin-left 12px
+      cursor pointer

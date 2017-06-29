@@ -8477,7 +8477,7 @@ img.mfp-img {
 
 html {
   line-height: 1;
-  font-size: 14px;
+  font-size: 16px;
 }
 body {
   font-family: 'Roboto', sans-serif;
@@ -8551,11 +8551,6 @@ button {
 .clearfix {
   *zoom: 1;
 }
-.wrapper {
-  width: 100%;
-  max-width: 1000px;
-  margin: 0 auto;
-}
 *:active,
 *:focus {
   outline: none;
@@ -8567,6 +8562,29 @@ button {
   width: 100%;
   max-width: 828px;
   margin: auto;
+}
+.content_align {
+  text-align: center;
+}
+.btn {
+  color: #000;
+  font-size: 17px;
+  line-height: 1.41;
+  text-align: center;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  background-color: #ffdd2d;
+  border: none;
+  padding: 20px 50px;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #f1cb0a;
+  -webkit-transition: all 300ms;
+  -o-transition: all 300ms;
+  -moz-transition: all 300ms;
+  transition: all 300ms;
 }
 @media screen and (max-width: 920px) {
   .content {
@@ -8580,13 +8598,30 @@ header {
 .logo {
   display: inline-block;
 }
-.logo img {
+.logo-main {
   width: 197px;
+  height: 65px;
+}
+.logo-mobile {
+  width: 50px;
+  height: 44px;
+  display: none;
 }
 .phone {
   font-size: 21px;
   float: right;
   margin-top: 22px;
+}
+.toggle {
+  float: right;
+  margin-top: 22px;
+  display: none;
+  cursor: pointer;
+  width: 25px;
+  height: 20px;
+}
+.block-centre {
+  float: right;
 }
 .menu-block {
   background-color: #3e4757;
@@ -8606,12 +8641,153 @@ header {
 .menu li {
   display: inline-block;
   vertical-align: top;
+  margin-bottom: -16px;
 }
 .menu__item {
   color: #fff;
   display: inline-block;
   padding: 25px 0;
+  border-bottom: 3px solid #3e4757;
+  -webkit-transition: border-bottom 300ms;
+  -o-transition: border-bottom 300ms;
+  -moz-transition: border-bottom 300ms;
+  transition: border-bottom 300ms;
 }
 .menu__item:hover {
-  border-bottom: 2px solid #ffdd2d;
+  border-bottom: 3px solid #ffdd2d;
+}
+.banner {
+  position: relative;
+  background: -webkit-gradient(linear, left top, right top, from(#1489e7), to(#003e82));
+  background: -webkit-linear-gradient(left, #1489e7, #003e82);
+  background: -moz-linear-gradient(left, #1489e7, #003e82);
+  background: -o-linear-gradient(left, #1489e7, #003e82);
+  background: linear-gradient(to right, #1489e7, #003e82);
+  color: #fff;
+  padding: 83px 0;
+  z-index: 100;
+  height: 373px;
+  overflow: hidden;
+}
+.banner:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../img/general/bitmap.png") no-repeat left;
+  z-index: -1;
+  display: block;
+  -moz-background-size: cover;
+    -o-background-size: cover;
+       background-size: cover;
+  width: 100%;
+  max-width: 542px;
+  height: 100%;
+}
+.main-title {
+  font-size: 50px;
+  font-weight: 100;
+  line-height: 1.1em;
+}
+.subtitle {
+  font-size: 16px;
+  line-height: 1.5em;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: block;
+}
+.info {
+  width: 50%;
+  float: right;
+  z-index: 300;
+}
+.block {
+  display: inline-block;
+  width: 33%;
+  padding: 18px;
+  vertical-align: top;
+}
+.block__title {
+  font-size: 28px;
+  font-weight: 300;
+  text-align: center;
+  color: #333;
+}
+.container {
+  padding: 55px 0;
+}
+.category {
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  border: solid 1px #dddfe0;
+  max-width: 252px;
+  color: #333;
+  padding: 18px;
+  margin-top: 30px;
+}
+.category__item {
+  background-color: #eef2f7;
+  font-size: 13px;
+  display: inline-block;
+  padding: 14px 10px;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+.category__item img {
+  margin-left: 12px;
+  cursor: pointer;
+}
+@media screen and (max-width: 992px) {
+  .logo-mobile {
+    display: block;
+  }
+  .logo-main {
+    display: none;
+  }
+  .toggle {
+    display: block;
+  }
+  .phone {
+    font-size: 17px;
+    float: left;
+  }
+  .block-centre {
+    width: -webkit-calc(50% + 60px);
+    width: -moz-calc(50% + 60px);
+    width: calc(50% + 60px);
+    float: right;
+  }
+  .banner:before {
+    -moz-background-size: contain;
+      -o-background-size: contain;
+         background-size: contain;
+  }
+}
+@media screen and (max-width: 768px) {
+  .info {
+    float: none;
+    display: inline-block;
+    z-index: 20;
+    width: 100%;
+  }
+  .title {
+    font-size: 30px;
+  }
+  .banner {
+    text-align: center;
+    padding: 25px 0;
+  }
+  .btn_absolute {
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 242px;
+  }
+  .banner:before {
+    top: 50px;
+  }
 }
