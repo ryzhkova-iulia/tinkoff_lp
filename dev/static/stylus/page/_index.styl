@@ -53,18 +53,22 @@
 
 
 .category
-  border-radius: 6px;
-  border: solid 1px #dddfe0;
+  block-border()
   max-width 252px
   color #333333
-  padding 18px
+  padding  18px
   margin-top 30px
+  text-align left
   &__item
+    margin 5px 0
     background-color #eef2f7
     font-size 13px
     display  inline-block
     padding 14px 10px
     border-radius 6px
-    img
-      margin-left 12px
-      cursor pointer
+  &__img
+    margin-left 12px
+    cursor pointer
+
+.select__item
+  block-border()

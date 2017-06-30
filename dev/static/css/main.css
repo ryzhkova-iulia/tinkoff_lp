@@ -8725,8 +8725,10 @@ header {
   color: #333;
   padding: 18px;
   margin-top: 30px;
+  text-align: left;
 }
 .category__item {
+  margin: 5px 0;
   background-color: #eef2f7;
   font-size: 13px;
   display: inline-block;
@@ -8735,9 +8737,15 @@ header {
      -moz-border-radius: 6px;
           border-radius: 6px;
 }
-.category__item img {
+.category__img {
   margin-left: 12px;
   cursor: pointer;
+}
+.select__item {
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  border: solid 1px #dddfe0;
 }
 @media screen and (max-width: 992px) {
   .logo-mobile {
