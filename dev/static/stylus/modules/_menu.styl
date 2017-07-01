@@ -1,9 +1,23 @@
 .menu-block
   background-color #3e4757
   width 100%
+  position relative
+  //&_mobile
+  //  display block
+  //  position absolute
+  //  z-index 500
+  //  top 0
+  //  right 0
+  //  .menu
+  //    width 100%
+  //    li
+  //      display block
+  //      text-align right
+
 
 .menu
   text-align justify
+
 
   &:after
     content ""
@@ -24,3 +38,7 @@
     transition border-bottom 300ms
     &:hover
       border-bottom 3px solid #ffdd2d
+
+//@media screen and (max-width : 992px)
+//  .menu-block
+//    display none

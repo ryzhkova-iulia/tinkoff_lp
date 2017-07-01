@@ -7,6 +7,7 @@
     <meta name="keywords" content="">
     <link rel="stylesheet" type="text/css" href="static/fonts/fonts.css">
     <link rel="stylesheet" type="text/css" href="static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="static/css/jquery.custom-scrollbar.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&amp;subset=cyrillic" rel="stylesheet">
     <title>Главная страница
     </title>
@@ -43,29 +44,121 @@
         <div class="content content_align">
           <div class="block">
             <h2 class="block__title">Любые категории  платежей</h2>
-            <div class="category">
-              <div class="category__item">Кафе<img class="category__img" src="./static/img/general/close.svg"></div>
-              <div class="category__item">Интернет<img class="category__img" src="./static/img/general/close.svg"></div>
-              <div class="category__item">Супермаркеты и гастрон<img class="category__img" src="./static/img/general/close.svg"></div>
-              <div class="category__item">Телефон<img class="category__img" src="./static/img/general/close.svg"></div>
-              <div class="category__item">ЖКХ<img class="category__img" src="./static/img/general/close.svg"></div>
-              <div class="category__item">Авто<img class="category__img" src="./static/img/general/close.svg"></div>
+            <div class="category js-scroll">
+              <div class="category__content">
+                <div class="category__item">Кафе</div>
+                <div class="category__item">Интернет</div>
+                <div class="category__item">Супермаркеты</div>
+                <div class="category__item">Телефон</div>
+                <div class="category__item">ЖКХ</div>
+                <div class="category__item">Авто</div>
+                <div class="category__item">Кафе</div>
+                <div class="category__item">Интернет</div>
+                <div class="category__item">Супермаркеты</div>
+              </div>
             </div>
           </div>
           <div class="block">
-            <form class="select">
-              <select class="select__item">
-                <option>Кредитная карта</option>
-              </select><span>Тип продукта</span>
+            <form>
+              <div class="field">
+                <select class="field__item">
+                  <option>Кредитная карта</option>
+                </select><span class="field__title">Тип продукта</span>
+              </div>
+              <div class="field">
+                <select class="field__item">
+                  <option>Кредитная карта</option>
+                </select><span class="field__title">Тип продукта</span>
+              </div>
+              <div class="field">
+                <textarea class="field__item field_textarea" placeholder="Желаемый размер кредита"></textarea>
+              </div>
+              <button class="btn">Заполнить заявку</button>
             </form>
           </div>
           <div class="block">
-            <h2 class="block__title">Любые категории  платежей</h2>
+            <div class="block-border">
+              <h2 class="block__title">Все условия  для вас</h2><span class="block__info">Стоимость обслуживания и всю информацию  о кредитных картах  вы сможете найти  в договоре
+                <div class="tooltip-icon"></div>
+                <div class="tooltip">
+                  Pragmatica Regular 13pt 18int ¶12
+                  Ваши данные замаскированы в целях безопасности. Для изменения информации с вами свяжется оператор колл-центра.
+                </div></span>
+            </div><a class="block__link" href="">ВСЕ УСЛОВИЯ</a>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="content">
+          <div class="block-tab clearfix">
+            <!--.tabs-->
+            <!--    input(type="radio" id="ka1" name="ak" checked="checked")-->
+            <!--    label(for="ka1").tabs__title-->
+            <!--        span СЧЕТА НА ОПЛАТУ-->
+            <!--    .tabs__content-->
+            <!--        h2.block__title У вас два неоплаченных штрафа-->
+            <!---->
+            <!--    input(type="radio" id="ka2" name="ak")-->
+            <!--    label(for="ka2").tabs__title-->
+            <!--        span ИЗБРАННОЕ-->
+            <!--    p.tabs__content Языком рыбного речью текстов залетают раз щеке имени рекламных маленькая, это дорогу гор оксмокс!-->
+            <!---->
+            <!--    input(type="radio" id="ka3" name="ak")-->
+            <!--    label(for="ka3").tabs__title-->
+            <!--        span ПЛАТЕЖИ И ПЕРЕВОДЫ-->
+            <!--    p.tabs__content Подпоясал его, путь дорогу которое повстречался!-->
+            <!---->
+            <!--    input(type="radio" id="ka4" name="ak")-->
+            <!--    label(for="ka4").tabs__title-->
+            <!--        span бонусы-->
+            <!--    p.tabs__content Подпоясал его, путь дорогу которое повстречался!-->
+            <div class="tabs">
+              <input type="radio" id="tab_1" name="tab" checked="checked">
+              <input type="radio" id="tab_2" name="tab">
+              <input type="radio" id="tab_3" name="tab">
+              <input type="radio" id="tab_4" name="tab">
+              <div class="tabs__title">
+                <div class="tabs__title__inner">
+                  <label id="tab_l1" for="tab_1">СЧЕТА НА ОПЛАТУ</label>
+                  <label id="tab_l2" for="tab_2">ИЗБРАННОЕ</label>
+                  <label id="tab_l3" for="tab_3">ПЛАТЕЖИ И ПЕРЕВОДЫ</label>
+                  <label id="tab_l4" for="tab_4">бонусы</label>
+                </div>
+              </div>
+              <div class="tabs_cont">
+                <div id="tab_c1">
+                  <h2 class="block__title">У вас два неоплаченных штрафа<span class="block__title__subtitle">Оплатите до 1 августа с 50% скидкой</span></h2>
+                  <form>
+                    <div class="row">
+                      <div class="field">
+                        <select class="field__item">
+                          <option>Tinkoff Black</option>
+                        </select><span class="field__title">78 000 Р</span>
+                      </div>
+                      <div class="field">
+                        <select class="field__item">
+                          <option>Штраф</option>
+                        </select><span class="field__title">Постановление №123456788</span>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="field field_width">
+                        <textarea class="field__item field_textarea" placeholder="Желаемый размер кредита"></textarea>
+                      </div>
+                      <button class="btn">Заполнить заявку</button>
+                    </div>
+                  </form>
+                </div>
+                <div id="tab_c2">Content of  second</div>
+                <div id="tab_c3">Content of third tab</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </div>
     <script src="static/js/jquery.js"></script>
+    <script src="static/js/jquery.custom-scrollbar.js"></script>
     <script src="static/js/libs.min.js"></script>
     <script src="static/js/main.js"></script>
   </body>

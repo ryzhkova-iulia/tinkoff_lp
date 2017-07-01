@@ -38,15 +38,39 @@
   z-index 300
 
 .block
-  display inline-block
   width 33%
   padding 18px
-  vertical-align top
+  display table-cell
+  vertical-align middle
   &__title
     font-size 28px
-    font-weight: 300;
-    text-align: center;
-    color: #333333;
+    font-weight 300
+    text-align center
+    color #333333
+  &__info
+    font-size 17px
+    line-height 1.41
+    text-align center
+    color #9299a2
+    padding 20px 0
+    display block
+  &__link
+    text-align center
+    color #74a3c7
+    text-transform uppercase
+    font-size 13px
+    display block
+    padding 20px 0
+    border 1px solid #dddfe0
+    border-radius 0 0 6px 6px
+
+.block-border
+    block-border()
+    padding 20px
+    border-bottom none
+    border-radius 6px 6px 0 0
+    position relative
+
 
 .container
   padding 55px 0
@@ -54,11 +78,16 @@
 
 .category
   block-border()
-  max-width 252px
+  width 252px
+  height 246px
   color #333333
-  padding  18px
+  padding 0 18px
   margin-top 30px
   text-align left
+
+  &__content
+    padding 18px 0
+
   &__item
     margin 5px 0
     background-color #eef2f7
@@ -66,9 +95,207 @@
     display  inline-block
     padding 14px 10px
     border-radius 6px
-  &__img
-    margin-left 12px
-    cursor pointer
 
-.select__item
+
+    &:after
+      content ""
+      display inline-block
+      width 12px
+      height 12px
+      background url("../img/general/close.svg") no-repeat center
+      margin-left 12px
+      vertical-align bottom
+      cursor pointer
+
+.field__item
   block-border()
+  width 100%
+  background-color #eef2f7
+  height 66px
+  font-size 17px
+  line-height 1.35
+  padding-top 30px
+  padding-left 18px
+  padding-right 18px
+
+
+.field
+  position relative
+  margin-bottom 22px
+  &:last-child
+    margin-bottom 0
+  &__title
+    position absolute
+    top 10px
+    left 18px
+    font-size 13px
+    color #9299a2
+  &_textarea
+    padding 13px
+
+
+.tooltip
+  width 100%
+  max-width  284px
+  padding 16px
+  block-border()
+  font-size 13px
+  line-height 1.38
+  color #9299a2
+  text-align left
+  display none
+  position absolute
+  bottom -15px
+  right  40%
+  z-index 200
+  background-color #FFFFFF
+
+
+.tooltip-icon
+  background url("../img/general/stroke-1-fill-2.svg") no-repeat center
+  width 24px
+  height 24px
+  display inline-block
+  margin-left 10px
+  cursor pointer
+  vertical-align bottom
+  &:hover + .tooltip
+    display block
+
+
+.block-tab
+  padding 50px
+  border-radius 6px
+  background-image linear-gradient(to bottom, #eff7ff, #edfbf6 44%, rgba(235, 255, 233, 0.4))
+
+//.tabs
+//  display flex
+//  width 100%
+//  flex-wrap wrap
+//  justify-content space-between
+//  input
+//    display none
+//  &__title
+//    order -1
+//    flex-grow 1
+//    cursor pointer
+//    display inline-block
+//    color #74a3c7
+//    font-size 13px
+//
+//    text-transform uppercase
+//    border-bottom 1px solid #dddfe0
+//    text-align center
+//    span
+//      padding-bottom 28px
+//      display inline-block
+//
+//    &:first-of-type
+//      text-align left
+//    &:last-of-type
+//      text-align right
+//  &__content
+//    display none
+//    width 100%
+//    flex-grow 2
+//  input:checked + .tabs__title span
+//    color #3e4757
+//    border-bottom 2px solid #ffdd2d
+//  input:checked + .tabs__title  + .tabs__content
+//    display flex
+
+
+.tabs {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+.tabs__title
+  border-bottom 1px solid #dddfe0
+  overflow-x auto
+  overflow-y hidden
+  &__inner
+    width 728px
+    display flex
+    justify-content space-between
+
+.tabs label {
+  color #74a3c7
+  cursor: pointer;
+  line-height: 45px;
+  position: relative;
+  top: 2px;
+  text-align: center;
+  font-size 13px
+  text-transform uppercase
+
+}
+
+.tabs input {
+  position: absolute;
+  left: -9999px;
+}
+
+//#tab_1:checked  ~ #tab_l1,
+//#tab_2:checked  ~ #tab_l2,
+#tab_1:checked .tabs__title .tabs__title__inner ~ #tab_l1 {
+  background: #fff;
+  border-color: #fff;
+  top: 0;
+  z-index: 3;
+}
+
+.tabs_cont {
+  position: relative;
+  z-index: 2;
+  margin-top 42px
+}
+
+.tabs_cont > div {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  opacity: 0;
+  -moz-transition: opacity .5s ease-in-out;
+  -webkit-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+}
+#tab_1:checked ~ .tabs_cont #tab_c1,
+#tab_2:checked ~ .tabs_cont #tab_c2,
+#tab_3:checked ~ .tabs_cont #tab_c3 {
+  position: static;
+  left: 0;
+  opacity: 1;
+}
+
+.block__title__subtitle
+  font-size 17px
+  color #9299a2
+  display block
+  margin-top 7px
+
+.row
+  text-align center
+  margin-top 30px
+  .field__item
+    width 100%
+    display inline-block
+    position relative
+    padding-bottom 18px
+    padding-top inherit
+  .field
+    width 49%
+    display inline-block
+    margin-bottom 0
+  .field__title
+    bottom 15px
+    top inherit
+    left 25px
+  .btn
+    width 48%
+    vertical-align top
+    float right
+
+  .field_width
+    width 48%
+    float left

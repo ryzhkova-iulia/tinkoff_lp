@@ -16,24 +16,95 @@ block content
         .content.content_align
             .block
                 h2.block__title Любые категории  платежей
-                .category
-                    .category__item Кафе
-                        img(src="./static/img/general/close.svg").category__img
-                    .category__item Интернет
-                        img(src="./static/img/general/close.svg").category__img
-                    .category__item Супермаркеты и гастрон
-                        img(src="./static/img/general/close.svg").category__img
-                    .category__item Телефон
-                        img(src="./static/img/general/close.svg").category__img
-                    .category__item ЖКХ
-                        img(src="./static/img/general/close.svg").category__img
-                    .category__item Авто
-                        img(src="./static/img/general/close.svg").category__img
+                .category.js-scroll
+                    .category__content
+                        .category__item Кафе
+                        .category__item Интернет
+                        .category__item Супермаркеты
+                        .category__item Телефон
+                        .category__item ЖКХ
+                        .category__item Авто
+                        .category__item Кафе
+                        .category__item Интернет
+                        .category__item Супермаркеты
+            .block
+                form
+                    div.field
+                        select.field__item
+                            option Кредитная карта
+                        span.field__title Тип продукта
+                    div.field
+                        select.field__item
+                            option Кредитная карта
+                        span.field__title Тип продукта
+                    div.field
+                        textarea(placeholder="Желаемый размер кредита").field__item.field_textarea
+                    button.btn Заполнить заявку
 
             .block
-                form.select
-                    select.select__item
-                        option Кредитная карта
-                    span Тип продукта
-            .block
-                h2.block__title Любые категории  платежей
+                .block-border
+                    h2.block__title Все условия  для вас
+                    span.block__info Стоимость обслуживания и всю информацию  о кредитных картах  вы сможете найти  в договоре
+                        .tooltip-icon
+                        .tooltip
+                            | Pragmatica Regular 13pt 18int ¶12
+                            | Ваши данные замаскированы в целях безопасности. Для изменения информации с вами свяжется оператор колл-центра.
+                a(href="").block__link ВСЕ УСЛОВИЯ
+
+    section
+        .content
+            .block-tab.clearfix
+                //.tabs
+                //    input(type="radio" id="ka1" name="ak" checked="checked")
+                //    label(for="ka1").tabs__title
+                //        span СЧЕТА НА ОПЛАТУ
+                //    .tabs__content
+                //        h2.block__title У вас два неоплаченных штрафа
+                //
+                //    input(type="radio" id="ka2" name="ak")
+                //    label(for="ka2").tabs__title
+                //        span ИЗБРАННОЕ
+                //    p.tabs__content Языком рыбного речью текстов залетают раз щеке имени рекламных маленькая, это дорогу гор оксмокс!
+                //
+                //    input(type="radio" id="ka3" name="ak")
+                //    label(for="ka3").tabs__title
+                //        span ПЛАТЕЖИ И ПЕРЕВОДЫ
+                //    p.tabs__content Подпоясал его, путь дорогу которое повстречался!
+                //
+                //    input(type="radio" id="ka4" name="ak")
+                //    label(for="ka4").tabs__title
+                //        span бонусы
+                //    p.tabs__content Подпоясал его, путь дорогу которое повстречался!
+                .tabs
+                    input(type="radio" id="tab_1" name="tab" checked="checked")
+                    input(type="radio" id="tab_2" name="tab")
+                    input(type="radio" id="tab_3" name="tab")
+                    input(type="radio" id="tab_4" name="tab")
+                    .tabs__title
+                        .tabs__title__inner
+                            label#tab_l1(for='tab_1') СЧЕТА НА ОПЛАТУ
+                            label#tab_l2(for='tab_2') ИЗБРАННОЕ
+                            label#tab_l3(for='tab_3') ПЛАТЕЖИ И ПЕРЕВОДЫ
+                            label#tab_l4(for='tab_4') бонусы
+
+                    .tabs_cont
+                        #tab_c1
+                            h2.block__title У вас два неоплаченных штрафа
+                                span.block__title__subtitle Оплатите до 1 августа с 50% скидкой
+                            form
+                                .row
+                                    .field
+                                        select.field__item
+                                            option Tinkoff Black
+                                        span.field__title 78 000 Р
+                                    .field
+                                        select.field__item
+                                            option Штраф
+                                        span.field__title Постановление №123456788
+                                .row
+                                    div.field.field_width
+                                        textarea(placeholder="Желаемый размер кредита").field__item.field_textarea
+                                    button.btn Заполнить заявку
+
+                        #tab_c2 Content of  second
+                        #tab_c3 Content of third tab
