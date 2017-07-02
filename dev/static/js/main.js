@@ -4,9 +4,8 @@
 //    })
 // });
 
-$(document).ready(function() {
-    $(".js-scroll").customScrollbar({
-        skin: "default-skin",
-        hScroll: false
+$(function () {
+    $(".js-category").select2({
+        theme : "default flat"
     });
 });

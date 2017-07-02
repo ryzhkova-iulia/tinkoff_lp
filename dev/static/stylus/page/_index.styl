@@ -168,41 +168,6 @@
   border-radius 6px
   background-image linear-gradient(to bottom, #eff7ff, #edfbf6 44%, rgba(235, 255, 233, 0.4))
 
-//.tabs
-//  display flex
-//  width 100%
-//  flex-wrap wrap
-//  justify-content space-between
-//  input
-//    display none
-//  &__title
-//    order -1
-//    flex-grow 1
-//    cursor pointer
-//    display inline-block
-//    color #74a3c7
-//    font-size 13px
-//
-//    text-transform uppercase
-//    border-bottom 1px solid #dddfe0
-//    text-align center
-//    span
-//      padding-bottom 28px
-//      display inline-block
-//
-//    &:first-of-type
-//      text-align left
-//    &:last-of-type
-//      text-align right
-//  &__content
-//    display none
-//    width 100%
-//    flex-grow 2
-//  input:checked + .tabs__title span
-//    color #3e4757
-//    border-bottom 2px solid #ffdd2d
-//  input:checked + .tabs__title  + .tabs__content
-//    display flex
 
 
 .tabs {
@@ -222,13 +187,12 @@
 .tabs label {
   color #74a3c7
   cursor: pointer;
-  line-height: 45px;
   position: relative;
   top: 2px;
   text-align: center;
   font-size 13px
   text-transform uppercase
-
+  padding-bottom 28px
 }
 
 .tabs input {
@@ -236,13 +200,15 @@
   left: -9999px;
 }
 
-//#tab_1:checked  ~ #tab_l1,
-//#tab_2:checked  ~ #tab_l2,
-#tab_1:checked .tabs__title .tabs__title__inner ~ #tab_l1 {
-  background: #fff;
-  border-color: #fff;
+
+#tab_1:checked ~ .tabs__title label[for="tab_1"],
+#tab_2:checked ~ .tabs__title label[for="tab_2"],
+#tab_3:checked ~ .tabs__title label[for="tab_3"],
+#tab_4:checked ~ .tabs__title label[for="tab_4"]{
   top: 0;
   z-index: 3;
+  color #3e4757
+  border-bottom 2px solid #ffdd2d
 }
 
 .tabs_cont {
@@ -284,9 +250,13 @@
     padding-bottom 18px
     padding-top inherit
   .field
-    width 49%
+    width 49.8%
     display inline-block
     margin-bottom 0
+    &:first-child
+      float left
+    &:last-child
+      float right
   .field__title
     bottom 15px
     top inherit
@@ -299,3 +269,74 @@
   .field_width
     width 48%
     float left
+
+
+
+.flat.select2-container--focus .select2-selection--multiple
+.flat .select2-selection--multiple
+  border 1px solid #dddfe0
+  height 252px
+  margin-top 30px
+
+
+.flat.select2-container--default .select2-selection--multiple .select2-selection__choice
+  margin 5px
+  background-color #eef2f7
+  font-size 13px
+  display  inline-block
+  padding 11px 25px 11px 8px
+  border-radius 6px
+  color #333333
+  position relative
+  border none
+
+.flat.select2-container--default .select2-selection--multiple .select2-selection__rendered
+  padding 15px
+
+.flat.select2-container--default .select2-selection--multiple .select2-selection__choice__remove
+  width 12px
+  height 12px
+  margin-left 12px
+  vertical-align bottom
+  cursor pointer
+  position absolute
+  right 8px
+  top 12px
+  content ""
+  color #eef2f7
+  &:after
+    width 12px
+    height 12px
+    background url("../img/general/close.svg") no-repeat center
+    margin-left 12px
+    vertical-align bottom
+    cursor pointer
+    position absolute
+    right 0
+    top 0
+    content ""
+    z-index 600
+
+
+
+
+
+
+//&__item
+//margin 5px 0
+//background-color #eef2f7
+//font-size 13px
+//display  inline-block
+//padding 14px 10px
+//border-radius 6px
+//
+//
+//&:after
+//  content ""
+//  display inline-block
+//  width 12px
+//  height 12px
+//  background url("../img/general/close.svg") no-repeat center
+//  margin-left 12px
+//  vertical-align bottom
+//  cursor pointer

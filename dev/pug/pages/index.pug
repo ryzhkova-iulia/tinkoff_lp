@@ -16,17 +16,27 @@ block content
         .content.content_align
             .block
                 h2.block__title Любые категории  платежей
-                .category.js-scroll
-                    .category__content
-                        .category__item Кафе
-                        .category__item Интернет
-                        .category__item Супермаркеты
-                        .category__item Телефон
-                        .category__item ЖКХ
-                        .category__item Авто
-                        .category__item Кафе
-                        .category__item Интернет
-                        .category__item Супермаркеты
+                select.category.js-category(multiple=true)
+                    option Кафе
+                    option Интернет
+                    option Супермаркеты
+                    option Телефон
+                    option ЖКХ
+                    option Авто
+                    option Кафе2
+                    option Суппер длинная категория
+
+                //.category.js-scroll
+                //    .category__content
+                //        .category__item Кафе
+                //        .category__item Интернет
+                //        .category__item Супермаркеты
+                //        .category__item Телефон
+                //        .category__item ЖКХ
+                //        .category__item Авто
+                //        .category__item Кафе
+                //        .category__item Интернет
+                //        .category__item Супермаркеты
             .block
                 form
                     div.field
@@ -54,27 +64,6 @@ block content
     section
         .content
             .block-tab.clearfix
-                //.tabs
-                //    input(type="radio" id="ka1" name="ak" checked="checked")
-                //    label(for="ka1").tabs__title
-                //        span СЧЕТА НА ОПЛАТУ
-                //    .tabs__content
-                //        h2.block__title У вас два неоплаченных штрафа
-                //
-                //    input(type="radio" id="ka2" name="ak")
-                //    label(for="ka2").tabs__title
-                //        span ИЗБРАННОЕ
-                //    p.tabs__content Языком рыбного речью текстов залетают раз щеке имени рекламных маленькая, это дорогу гор оксмокс!
-                //
-                //    input(type="radio" id="ka3" name="ak")
-                //    label(for="ka3").tabs__title
-                //        span ПЛАТЕЖИ И ПЕРЕВОДЫ
-                //    p.tabs__content Подпоясал его, путь дорогу которое повстречался!
-                //
-                //    input(type="radio" id="ka4" name="ak")
-                //    label(for="ka4").tabs__title
-                //        span бонусы
-                //    p.tabs__content Подпоясал его, путь дорогу которое повстречался!
                 .tabs
                     input(type="radio" id="tab_1" name="tab" checked="checked")
                     input(type="radio" id="tab_2" name="tab")
@@ -82,17 +71,17 @@ block content
                     input(type="radio" id="tab_4" name="tab")
                     .tabs__title
                         .tabs__title__inner
-                            label#tab_l1(for='tab_1') СЧЕТА НА ОПЛАТУ
-                            label#tab_l2(for='tab_2') ИЗБРАННОЕ
-                            label#tab_l3(for='tab_3') ПЛАТЕЖИ И ПЕРЕВОДЫ
-                            label#tab_l4(for='tab_4') бонусы
+                            label(for='tab_1') СЧЕТА НА ОПЛАТУ
+                            label(for='tab_2') ИЗБРАННОЕ
+                            label(for='tab_3') ПЛАТЕЖИ И ПЕРЕВОДЫ
+                            label(for='tab_4') бонусы
 
                     .tabs_cont
                         #tab_c1
                             h2.block__title У вас два неоплаченных штрафа
                                 span.block__title__subtitle Оплатите до 1 августа с 50% скидкой
                             form
-                                .row
+                                .row.clearfix
                                     .field
                                         select.field__item
                                             option Tinkoff Black

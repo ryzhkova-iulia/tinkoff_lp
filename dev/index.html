@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="keywords" content="">
     <link rel="stylesheet" type="text/css" href="static/fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="static/css/select2.min.css">
     <link rel="stylesheet" type="text/css" href="static/css/main.css">
-    <link rel="stylesheet" type="text/css" href="static/css/jquery.custom-scrollbar.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&amp;subset=cyrillic" rel="stylesheet">
     <title>Главная страница
     </title>
@@ -44,19 +44,27 @@
         <div class="content content_align">
           <div class="block">
             <h2 class="block__title">Любые категории  платежей</h2>
-            <div class="category js-scroll">
-              <div class="category__content">
-                <div class="category__item">Кафе</div>
-                <div class="category__item">Интернет</div>
-                <div class="category__item">Супермаркеты</div>
-                <div class="category__item">Телефон</div>
-                <div class="category__item">ЖКХ</div>
-                <div class="category__item">Авто</div>
-                <div class="category__item">Кафе</div>
-                <div class="category__item">Интернет</div>
-                <div class="category__item">Супермаркеты</div>
-              </div>
-            </div>
+            <select class="category js-category" multiple>
+              <option>Кафе</option>
+              <option>Интернет</option>
+              <option>Супермаркеты</option>
+              <option>Телефон</option>
+              <option>ЖКХ</option>
+              <option>Авто</option>
+              <option>Кафе2</option>
+              <option>Суппер длинная категория</option>
+            </select>
+            <!--.category.js-scroll-->
+            <!--    .category__content-->
+            <!--        .category__item Кафе-->
+            <!--        .category__item Интернет-->
+            <!--        .category__item Супермаркеты-->
+            <!--        .category__item Телефон-->
+            <!--        .category__item ЖКХ-->
+            <!--        .category__item Авто-->
+            <!--        .category__item Кафе-->
+            <!--        .category__item Интернет-->
+            <!--        .category__item Супермаркеты-->
           </div>
           <div class="block">
             <form>
@@ -91,27 +99,6 @@
       <section>
         <div class="content">
           <div class="block-tab clearfix">
-            <!--.tabs-->
-            <!--    input(type="radio" id="ka1" name="ak" checked="checked")-->
-            <!--    label(for="ka1").tabs__title-->
-            <!--        span СЧЕТА НА ОПЛАТУ-->
-            <!--    .tabs__content-->
-            <!--        h2.block__title У вас два неоплаченных штрафа-->
-            <!---->
-            <!--    input(type="radio" id="ka2" name="ak")-->
-            <!--    label(for="ka2").tabs__title-->
-            <!--        span ИЗБРАННОЕ-->
-            <!--    p.tabs__content Языком рыбного речью текстов залетают раз щеке имени рекламных маленькая, это дорогу гор оксмокс!-->
-            <!---->
-            <!--    input(type="radio" id="ka3" name="ak")-->
-            <!--    label(for="ka3").tabs__title-->
-            <!--        span ПЛАТЕЖИ И ПЕРЕВОДЫ-->
-            <!--    p.tabs__content Подпоясал его, путь дорогу которое повстречался!-->
-            <!---->
-            <!--    input(type="radio" id="ka4" name="ak")-->
-            <!--    label(for="ka4").tabs__title-->
-            <!--        span бонусы-->
-            <!--    p.tabs__content Подпоясал его, путь дорогу которое повстречался!-->
             <div class="tabs">
               <input type="radio" id="tab_1" name="tab" checked="checked">
               <input type="radio" id="tab_2" name="tab">
@@ -119,17 +106,17 @@
               <input type="radio" id="tab_4" name="tab">
               <div class="tabs__title">
                 <div class="tabs__title__inner">
-                  <label id="tab_l1" for="tab_1">СЧЕТА НА ОПЛАТУ</label>
-                  <label id="tab_l2" for="tab_2">ИЗБРАННОЕ</label>
-                  <label id="tab_l3" for="tab_3">ПЛАТЕЖИ И ПЕРЕВОДЫ</label>
-                  <label id="tab_l4" for="tab_4">бонусы</label>
+                  <label for="tab_1">СЧЕТА НА ОПЛАТУ</label>
+                  <label for="tab_2">ИЗБРАННОЕ</label>
+                  <label for="tab_3">ПЛАТЕЖИ И ПЕРЕВОДЫ</label>
+                  <label for="tab_4">бонусы</label>
                 </div>
               </div>
               <div class="tabs_cont">
                 <div id="tab_c1">
                   <h2 class="block__title">У вас два неоплаченных штрафа<span class="block__title__subtitle">Оплатите до 1 августа с 50% скидкой</span></h2>
                   <form>
-                    <div class="row">
+                    <div class="row clearfix">
                       <div class="field">
                         <select class="field__item">
                           <option>Tinkoff Black</option>
@@ -157,9 +144,77 @@
         </div>
       </section>
     </div>
+    <footer class="footer clearfix">
+      <div class="content">
+        <div class="section clearfix">
+          <div class="block-item">
+            <div class="block-list">
+              <div class="block-list__title">О БАНКЕ</div>
+              <ul class="list">
+                <li class="list__item"><a class="list__link" href="#">Тинькофф Банк</a></li>
+                <li class="list__item"><a class="list__link" href="#">Новости</a></li>
+                <li class="list__item"><a class="list__link" href="#">Вакансии</a></li>
+                <li class="list__item"><a class="list__link" href="#">For Investors</a></li>
+              </ul>
+            </div>
+            <div class="block-list">
+              <div class="block-list__title">КАРТЫ</div>
+              <ul class="list">
+                <li class="list__item"><a class="list__link" href="#">Кредитные карты</a></li>
+                <li class="list__item"><a class="list__link" href="#">Дебетовые карты</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="block-item">
+            <div class="block-list">
+              <div class="block-list__title">СТРАХОВАНИЕ</div>
+              <ul class="list">
+                <li class="list__item"><a class="list__link" href="#">Автомобиль</a></li>
+                <li class="list__item"><a class="list__link" href="#">Жизнь и здоровье</a></li>
+                <li class="list__item"><a class="list__link" href="#">Путешествия</a></li>
+                <li class="list__item"><a class="list__link" href="#">Имущество</a></li>
+              </ul>
+            </div>
+            <div class="block-list">
+              <div class="block-list__title">ВКЛАДЫ</div>
+              <ul class="list">
+                <li class="list__item"><a class="list__link" href="#">Ставки по вкладам</a></li>
+                <li class="list__item"><a class="list__link" href="#">Тарифы</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="section clearfix">
+          <div class="cont clearfix"><a class="phone" href="tel:88005551122">8 800 555-11-22<span class="phone__subtitle">Для звонков по России</span></a><a class="btn-call" href="">Онлайн-звонок в банк</a></div>
+          <div class="social clearfix">
+            <ul class="social-list">
+              <li class="social-item"><a class="social-link social-link_vk" href="#"></a></li>
+              <li class="social-item"><a class="social-link social-link_fb" href="#"></a></li>
+              <li class="social-item"><a class="social-link social-link_tw" href="#"></a></li>
+              <li class="social-item"><a class="social-link social-link_ok" href="#"></a></li>
+              <li class="social-item"><a class="social-link social-link_google" href="#"></a></li>
+              <li class="social-item"><a class="social-link social-link_youtube" href="#"></a></li>
+            </ul>
+          </div>
+          <ul class="list-nav">
+            <li class="list-nav__item"><a class="list-nav__link" href="#">О БАНКЕ</a><a class="list-nav__link" href="#">КАРТЫ</a></li>
+            <li class="list-nav__item"><a class="list-nav__link" href="#">СТРАХОВАНИЕ</a><a class="list-nav__link" href="#">ВКЛАДЫ</a></li>
+          </ul>
+          <ul class="list list_align">
+            <li class="list__item list__item_inline"><a class="list__link" href="#">Курсы валют</a></li>
+            <li class="list__item list__item_inline"><a class="list__link" href="#">Мобильные приложения</a></li>
+            <li class="list__item list__item_inline"><a class="list__link" href="#">Карта сайта</a></li>
+            <li class="list__item list__item_inline"><a class="list__link" href="#">Информация о лицах, под контролем которых находится банк</a></li>
+          </ul>
+        </div>
+        <div class="disclaimer clearfix">
+          <div class="disclaimer-info">© 2006–2015, АО «Тинькофф Банк», официальный сайт, лицензия ЦБ РФ № 2673</div><a class="language" href="">English</a>
+        </div>
+      </div>
+    </footer>
     <script src="static/js/jquery.js"></script>
-    <script src="static/js/jquery.custom-scrollbar.js"></script>
     <script src="static/js/libs.min.js"></script>
+    <script src="static/js/select2.full.min.js"></script>
     <script src="static/js/main.js"></script>
   </body>
 </html>
