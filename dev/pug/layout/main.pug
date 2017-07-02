@@ -8,6 +8,7 @@ html(lang="ru-RU")
         link(rel="stylesheet" type='text/css' href="static/fonts/fonts.css")
         link(rel="stylesheet" type='text/css' href="static/css/select2.min.css")
         link(rel="stylesheet" type='text/css' href="static/css/main.css")
+        link(rel="stylesheet" type='text/css' href="static/css/jquery.mCustomScrollbar.min.css")
         link(href='https://fonts.googleapis.com/css?family=Roboto:300,400&subset=cyrillic', rel='stylesheet')
 
 
@@ -16,9 +17,11 @@ html(lang="ru-RU")
     body
         include ../modules/header
         .wrapper
-            block content
-        include ../modules/footer
+            .wrapper-content
+                block content
+            include ../modules/footer
         script(src="static/js/jquery.js")
+        script(src="static/js/jquery.mCustomScrollbar.concat.min.js")
         script(src="static/js/libs.min.js")
         script(src="static/js/select2.full.min.js")
         script(src="static/js/main.js")

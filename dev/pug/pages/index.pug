@@ -17,30 +17,22 @@ block content
             .block
                 h2.block__title Любые категории  платежей
                 select.category.js-category(multiple=true)
-                    option Кафе
-                    option Интернет
-                    option Супермаркеты
-                    option Телефон
-                    option ЖКХ
-                    option Авто
-                    option Кафе2
-                    option Суппер длинная категория
-
-                //.category.js-scroll
-                //    .category__content
-                //        .category__item Кафе
-                //        .category__item Интернет
-                //        .category__item Супермаркеты
-                //        .category__item Телефон
-                //        .category__item ЖКХ
-                //        .category__item Авто
-                //        .category__item Кафе
-                //        .category__item Интернет
-                //        .category__item Супермаркеты
+                    option(selected="true") Кафе
+                    option(selected="true") Интернет
+                    option(selected="true") Супермаркеты
+                    option(selected="true") Телефон
+                    option(selected="true") ЖКХ
+                    option(selected="true") Авто
+                    option(selected="true") Кафе2
+                    option(selected="true") Длинная категория
+                    option(selected="true") Еще категория
+                    option(selected="true") Булочки
             .block
                 form
                     div.field
                         select.field__item
+                            option Кредитная карта
+                            option Кредитная карта
                             option Кредитная карта
                         span.field__title Тип продукта
                     div.field
@@ -57,7 +49,6 @@ block content
                     span.block__info Стоимость обслуживания и всю информацию  о кредитных картах  вы сможете найти  в договоре
                         .tooltip-icon
                         .tooltip
-                            | Pragmatica Regular 13pt 18int ¶12
                             | Ваши данные замаскированы в целях безопасности. Для изменения информации с вами свяжется оператор колл-центра.
                 a(href="").block__link ВСЕ УСЛОВИЯ
 
@@ -80,7 +71,7 @@ block content
                         #tab_c1
                             h2.block__title У вас два неоплаченных штрафа
                                 span.block__title__subtitle Оплатите до 1 августа с 50% скидкой
-                            form
+                            form.form-penalty
                                 .row.clearfix
                                     .field
                                         select.field__item
@@ -90,10 +81,57 @@ block content
                                         select.field__item
                                             option Штраф
                                         span.field__title Постановление №123456788
-                                .row
-                                    div.field.field_width
-                                        textarea(placeholder="Желаемый размер кредита").field__item.field_textarea
+                                .row.clearfix
+                                    .field
+                                        input(type="text" placeholder="Сумма Р")
                                     button.btn Заполнить заявку
 
-                        #tab_c2 Content of  second
-                        #tab_c3 Content of third tab
+                        #tab_c2
+                            h2.block__title У вас два неоплаченных штрафа
+                                span.block__title__subtitle Оплатите до 1 августа с 50% скидкой
+                            form.form-penalty
+                                .row.clearfix
+                                    .field
+                                        select.field__item
+                                            option Tinkoff Black
+                                        span.field__title 78 000 Р
+                                    .field
+                                        select.field__item
+                                            option Штраф
+                                        span.field__title Постановление №123456788
+
+                        #tab_c3
+                            h2.block__title У вас два неоплаченных штрафа
+                                span.block__title__subtitle Оплатите до 1 августа с 50% скидкой
+                        #tab_c4
+                            h2.block__title У вас два неоплаченных штрафа
+                                span.block__title__subtitle Оплатите до 1 августа с 50% скидкой
+
+
+    section.block-form
+        h2.block__title Заполните несколько простых полей
+        form.form
+            .form-fieled
+                input(type="text" value="")
+                span.form-fieled__title ФИО
+            .form-fieled
+                input(type="text")
+                span.form-fieled__title Город проживания
+            .form-fieled
+                input(type="text")
+                span.form-fieled__title Мобильный телефон
+            .form-fieled
+                input(type="text")
+                span.form-fieled__title Электронная почта
+
+            h3.checkbox-title Выберите это или другое
+            .checkbox.clearfix
+                .block-input
+                    label.block-input__label
+                        input.block-input__radio(type="radio" checked="checked" name="radio")
+                        span.block-input__cont  Это
+                .block-input
+                    label.block-input__label
+                        input.block-input__radio(type="radio"  name="radio")
+                        span.block-input__cont  Другое
+            button.btn Отправить

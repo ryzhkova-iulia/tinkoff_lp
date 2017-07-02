@@ -114,7 +114,7 @@
   height 66px
   font-size 17px
   line-height 1.35
-  padding-top 30px
+  padding-top 20px
   padding-left 18px
   padding-right 18px
 
@@ -126,12 +126,12 @@
     margin-bottom 0
   &__title
     position absolute
-    top 10px
-    left 18px
+    top 15px
+    left 21px
     font-size 13px
     color #9299a2
   &_textarea
-    padding 13px
+    padding 13px 18px
 
 
 .tooltip
@@ -228,7 +228,8 @@
 }
 #tab_1:checked ~ .tabs_cont #tab_c1,
 #tab_2:checked ~ .tabs_cont #tab_c2,
-#tab_3:checked ~ .tabs_cont #tab_c3 {
+#tab_3:checked ~ .tabs_cont #tab_c3,
+#tab_4:checked ~ .tabs_cont #tab_c4 {
   position: static;
   left: 0;
   opacity: 1;
@@ -240,9 +241,16 @@
   display block
   margin-top 7px
 
+.tabs_cont
+  max-width: 540px;
+  margin: 30px auto;
+
+.form-penalty
+  margin-top 40px
+
 .row
   text-align center
-  margin-top 30px
+
   .field__item
     width 100%
     display inline-block
@@ -252,7 +260,19 @@
   .field
     width 49.8%
     display inline-block
-    margin-bottom 0
+    margin-bottom 30px
+    input
+      position: static;
+      float: left
+      block-border()
+      background-color: #eef2f7;
+      height: 66px;
+      font-size: 17px;
+      line-height: 1.35;
+      padding-top: 20px;
+      padding-left: 18px;
+      padding-right: 18px;
+
     &:first-child
       float left
     &:last-child
@@ -317,26 +337,107 @@
     content ""
     z-index 600
 
+.flat.select2-container .select2-search--inline
+  line-height 44px
+
+.block-form
+  padding-top 63px
+  max-width 540px
+  margin auto
+
+.form
+  margin-top 25px
+  text-align center
+  .btn
+    width 258px
+    margin-top 50px
+
+.form-fieled
+  position relative
+  padding 20px
+  border-radius 6px
+  background-color #eef2f7
+  margin-top 15px
+  &__title
+    position absolute
+    top: 50%;
+    transform: translate(0, -50%);
+    left 20px
+    font-size 17px
+    color #74a3c7
+    transition all 300ms
+    z-index 60
+  input
+    width 100%
+    position: relative;
+    border none
+    z-index 90
+    background-color transparent
+
+
+.form-fieled input:focus + .form-fieled__title,
+.form-fieled_has-content .form-fieled__title
+  top 20%
+  font-size 13px
+  transition all 300ms
 
 
 
+.checkbox-title
+  font-size 21px
+  font-weight 300
+  text-align center
+  color #333333
+  margin-top 25px
+
+.block-input
+  text-align left
+  position relative
+  width 258px
+  margin-top 27px
+  border-radius: 6px;
+  background-color: #ffffff;
+  border: solid 1px #dddfe0;
+  display inline-block
+  &:first-child
+    float: left
+  &:last-child
+    float: right
+  &__label
+    padding: 23px 50px 23px 24px;
+    display block
+    font-size: 17px;
+    color #74a3c7
+    cursor pointer
+
+  input
+    display none
 
 
-//&__item
-//margin 5px 0
-//background-color #eef2f7
-//font-size 13px
-//display  inline-block
-//padding 14px 10px
-//border-radius 6px
-//
-//
-//&:after
-//  content ""
-//  display inline-block
-//  width 12px
-//  height 12px
-//  background url("../img/general/close.svg") no-repeat center
-//  margin-left 12px
-//  vertical-align bottom
-//  cursor pointer
+  &__cont
+    width 100%
+    display block
+    position relative
+    &:after
+      content: '';
+      position: absolute;
+      top: 50%;
+      right -20px
+      transform: translate(0, -50%);
+      width 30px
+      height: 30px;
+      border-radius: 50%;
+      background-color #eef2f7
+      transition: background 0.5s;
+
+
+.block-input__radio:checked + .block-input__cont
+  color: #333333;
+.block-input__radio:checked + .block-input__cont:after
+  width: 12px;
+  height: 12px;
+  background-color #333
+  border 9px solid #ffdd2d
+  border-radius: 50%;
+  box-sizing content-box
+
