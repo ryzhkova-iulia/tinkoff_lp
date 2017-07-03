@@ -62,16 +62,16 @@ block content
                     input(type="radio" id="tab_3" name="tab").tabs__input
                     input(type="radio" id="tab_4" name="tab").tabs__input
                     .tabs__title
-                        .tabs__title__inner
-                            label(for='tab_1') СЧЕТА НА ОПЛАТУ
-                            label(for='tab_2') ИЗБРАННОЕ
-                            label(for='tab_3') ПЛАТЕЖИ И ПЕРЕВОДЫ
-                            label(for='tab_4') бонусы
+                        .tabs__inner
+                            label(for='tab_1').tabs__label СЧЕТА НА ОПЛАТУ
+                            label(for='tab_2').tabs__label ИЗБРАННОЕ
+                            label(for='tab_3').tabs__label ПЛАТЕЖИ И ПЕРЕВОДЫ
+                            label(for='tab_4').tabs__label бонусы
 
                     .tabs_cont
                         #tab_c1
                             h2.block__title У вас два неоплаченных штрафа
-                                span.block__title__subtitle Оплатите до 1 августа с 50% скидкой
+                                span.block__subtitle Оплатите до 1 августа с 50% скидкой
                             form.form-penalty
                                 .row.clearfix
                                     .field
@@ -90,15 +90,15 @@ block content
 
                         #tab_c2
                             h2.block__title У вас два неоплаченных штрафа
-                                span.block__title__subtitle tab 2
+                                span.block__subtitle tab 2
 
 
                         #tab_c3
                             h2.block__title У вас два неоплаченных штрафа
-                                span.block__title__subtitle Оплатите до 1 августа с 50% скидкой
+                                span.block__subtitle Оплатите до 1 августа с 50% скидкой
                         #tab_c4
                             h2.block__title У вас два неоплаченных штрафа
-                                span.block__title__subtitle Оплатите до 1 августа с 50% скидкой
+                                span.block__subtitle Оплатите до 1 августа с 50% скидкой
 
 
     section.block-form

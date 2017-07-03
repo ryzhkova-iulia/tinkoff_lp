@@ -8899,7 +8899,7 @@ select::-ms-expand {
   overflow-x: auto;
   overflow-y: hidden;
 }
-.tabs__title__inner {
+.tabs__inner {
   width: 728px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -8912,7 +8912,7 @@ select::-ms-expand {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.tabs label {
+.tabs__label {
   color: #74a3c7;
   cursor: pointer;
   position: relative;
@@ -8926,10 +8926,10 @@ select::-ms-expand {
   position: absolute;
   left: -9999px;
 }
-#tab_1:checked ~ .tabs__title label[for="tab_1"],
-#tab_2:checked ~ .tabs__title label[for="tab_2"],
-#tab_3:checked ~ .tabs__title label[for="tab_3"],
-#tab_4:checked ~ .tabs__title label[for="tab_4"] {
+#tab_1:checked ~ .tabs__title .tabs__label[for="tab_1"],
+#tab_2:checked ~ .tabs__title .tabs__label[for="tab_2"],
+#tab_3:checked ~ .tabs__title .tabs__label[for="tab_3"],
+#tab_4:checked ~ .tabs__title .tabs__label[for="tab_4"] {
   top: 0;
   z-index: 3;
   color: #3e4757;
@@ -8958,7 +8958,7 @@ select::-ms-expand {
   left: 0;
   opacity: 1;
 }
-.block__title__subtitle {
+.block__subtitle {
   font-size: 17px;
   color: #9299a2;
   display: block;

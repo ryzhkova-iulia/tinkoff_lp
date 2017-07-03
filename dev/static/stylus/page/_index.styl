@@ -175,41 +175,40 @@ select::-ms-expand
 
 
 
-.tabs {
-  position: relative;
-  margin: 0 auto;
-  width: 100%;
-}
-.tabs__title
-  border-bottom 1px solid #dddfe0
-  overflow-x auto
-  overflow-y hidden
+.tabs
+  position: relative
+  margin: 0 auto
+  width: 100%
+
+  &__title
+    border-bottom 1px solid #dddfe0
+    overflow-x auto
+    overflow-y hidden
+
   &__inner
     width 728px
     display flex
     justify-content space-between
 
-.tabs label {
-  color #74a3c7
-  cursor: pointer;
-  position: relative;
-  top: 2px;
-  text-align: center;
-  font-size 13px
-  text-transform uppercase
-  padding-bottom 28px
-}
+  &__label
+    color #74a3c7
+    cursor: pointer
+    position: relative
+    top: 2px
+    text-align: center
+    font-size 13px
+    text-transform uppercase
+    padding-bottom 28px
 
-.tabs__input {
-  position: absolute;
-  left: -9999px;
-}
+  &__input
+    position: absolute
+    left: -9999px
 
 
-#tab_1:checked ~ .tabs__title label[for="tab_1"],
-#tab_2:checked ~ .tabs__title label[for="tab_2"],
-#tab_3:checked ~ .tabs__title label[for="tab_3"],
-#tab_4:checked ~ .tabs__title label[for="tab_4"]{
+#tab_1:checked ~ .tabs__title .tabs__label[for="tab_1"],
+#tab_2:checked ~ .tabs__title .tabs__label[for="tab_2"],
+#tab_3:checked ~ .tabs__title .tabs__label[for="tab_3"],
+#tab_4:checked ~ .tabs__title .tabs__label[for="tab_4"]{
   top: 0;
   z-index: 3;
   color #3e4757
@@ -240,7 +239,7 @@ select::-ms-expand
   opacity: 1;
 }
 
-.block__title__subtitle
+.block__subtitle
   font-size 17px
   color #9299a2
   display block
