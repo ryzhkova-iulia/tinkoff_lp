@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE = edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" href="static/fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="static/css/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/main.css">
+    <link rel="stylesheet" type="text/css" href="static/css/jquery.mCustomScrollbar.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&amp;subset=cyrillic" rel="stylesheet">
+    <title>Главная страница
+    </title>
+  </head>
+  <body>
+    <header>
+      <div class="content content-inner">
+        <div class="logo"><a href="/"><img class="logo-main" src="./static/img/general/header-logo.svg"><img class="logo-mobile" src="./static/img/general/logo-min.svg"></a></div>
+        <div class="block-centre"><img class="toggle" src="./static/img/general/toggle.svg"><a class="phone" href="tel:88005551122">8 800 555-11-22</a></div>
+      </div>
+    </header>
+    <div class="wrapper">
+      <div class="wrapper-content">
+        <nav class="menu-block">
+          <div class="content">
+            <ul class="menu">
+              <li><a class="menu__item" href="">карты</a></li>
+              <li><a class="menu__item" href="">вклады</a></li>
+              <li><a class="menu__item" href="">платежи и переводы</a></li>
+              <li><a class="menu__item" href="">бонусы</a></li>
+              <li><a class="menu__item" href="">страхование</a></li>
+              <li><a class="menu__item" href="">о банке</a></li>
+            </ul>
+          </div>
+        </nav>
+        <section class="banner clearfix">
+          <div class="content">
+            <div class="info">
+              <h1 class="main-title">Карты для вас<br> прямо сейчас</h1><span class="subtitle">Выбирайте карту, пользуйтесь<br>удобными сервисами</span>
+              <button class="btn btn_absolute">Оформить заявку</button>
+            </div>
+          </div>
+        </section>
+        <section class="container">
+          <div class="content content_align">
+            <div class="block">
+              <h2 class="block__title">Любые категории платежей</h2>
+              <select class="category js-category" multiple>
+                <option selected="true">Кафе</option>
+                <option selected="true">Интернет</option>
+                <option selected="true">Супермаркеты</option>
+                <option selected="true">Телефон</option>
+                <option selected="true">ЖКХ</option>
+                <option selected="true">Авто</option>
+                <option selected="true">Кафе2</option>
+                <option selected="true">Длинная категория</option>
+                <option selected="true">Еще категория</option>
+                <option selected="true">Булочки</option>
+              </select>
+            </div>
+            <div class="block">
+              <form>
+                <div class="field">
+                  <select class="field__item">
+                    <option>Кредитная карта</option>
+                    <option>Кредитная карта</option>
+                    <option>Кредитная карта</option>
+                  </select><span class="field__title">Тип продукта</span>
+                </div>
+                <div class="field">
+                  <select class="field__item">
+                    <option>Кредитная карта</option>
+                  </select><span class="field__title">Тип продукта</span>
+                </div>
+                <div class="field">
+                  <textarea class="field__item field_textarea" placeholder="Желаемый размер кредита"></textarea>
+                  <!--span.area-title Желаемый размер кредита-->
+                </div>
+                <button class="btn">Заполнить заявку</button>
+              </form>
+            </div>
+            <div class="block">
+              <div class="block-border">
+                <h2 class="block__title">Все условия для вас</h2><span class="block__info">Стоимость обслуживания и всю информацию о кредитных картах вы сможете найти в договоре
+                  <div class="tooltip-icon">
+                    <div class="tooltip">Ваши данные замаскированы в целях безопасности. Для изменения информации с вами свяжется оператор колл-центра.</div>
+                  </div></span>
+              </div><a class="block__link" href="#">ВСЕ УСЛОВИЯ</a>
+            </div>
+          </div>
+        </section>
+        <section>
+          <div class="content">
+            <div class="block-tab clearfix">
+              <div class="tabs">
+                <input class="tabs__input" type="radio" id="tab_1" name="tab" checked="checked">
+                <input class="tabs__input" type="radio" id="tab_2" name="tab">
+                <input class="tabs__input" type="radio" id="tab_3" name="tab">
+                <input class="tabs__input" type="radio" id="tab_4" name="tab">
+                <div class="tabs__title">
+                  <div class="tabs__title__inner">
+                    <label for="tab_1">СЧЕТА НА ОПЛАТУ</label>
+                    <label for="tab_2">ИЗБРАННОЕ</label>
+                    <label for="tab_3">ПЛАТЕЖИ И ПЕРЕВОДЫ</label>
+                    <label for="tab_4">бонусы</label>
+                  </div>
+                </div>
+                <div class="tabs_cont">
+                  <div id="tab_c1">
+                    <h2 class="block__title">У вас два неоплаченных штрафа<span class="block__title__subtitle">Оплатите до 1 августа с 50% скидкой</span></h2>
+                    <form class="form-penalty">
+                      <div class="row clearfix">
+                        <div class="field">
+                          <select class="js-card"></select>
+                        </div>
+                        <div class="field">
+                          <select class="js-card"></select>
+                        </div>
+                      </div>
+                      <div class="row clearfix">
+                        <div class="field">
+                          <div class="form-fieled form-fieled_select">
+                            <input type="text" value=""><span class="form-fieled__title">Сумма Р</span>
+                          </div>
+                        </div>
+                        <button class="btn">Заполнить заявку</button>
+                      </div>
+                    </form>
+                  </div>
+                  <div id="tab_c2">
+                    <h2 class="block__title">У вас два неоплаченных штрафа<span class="block__title__subtitle">tab 2</span></h2>
+                  </div>
+                  <div id="tab_c3">
+                    <h2 class="block__title">У вас два неоплаченных штрафа<span class="block__title__subtitle">Оплатите до 1 августа с 50% скидкой</span></h2>
+                  </div>
+                  <div id="tab_c4">
+                    <h2 class="block__title">У вас два неоплаченных штрафа<span class="block__title__subtitle">Оплатите до 1 августа с 50% скидкой</span></h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="block-form">
+          <h2 class="block__title">Заполните несколько простых полей</h2>
+          <form class="form">
+            <div class="form-fieled">
+              <input type="text" value=""><span class="form-fieled__title">ФИО</span>
+            </div>
+            <div class="form-fieled error">
+              <input type="text"><span class="form-fieled__title">Город проживания</span>
+            </div>
+            <div class="form-fieled">
+              <input type="text"><span class="form-fieled__title">Мобильный телефон</span>
+            </div>
+            <div class="form-fieled">
+              <input type="text"><span class="form-fieled__title">Электронная почта</span>
+            </div>
+            <div class="checkbox clearfix">
+              <h3 class="checkbox-title">Выберите это или другое</h3>
+              <div class="block-input">
+                <label class="block-input__label">
+                  <input class="block-input__radio" type="radio" checked="checked" name="radio"><span class="block-input__cont"> Это</span>
+                </label>
+              </div>
+              <div class="block-input">
+                <label class="block-input__label">
+                  <input class="block-input__radio" type="radio" name="radio"><span class="block-input__cont"> Другое</span>
+                </label>
+              </div>
+            </div>
+            <button class="btn">Отправить</button>
+          </form>
+        </section>
+      </div>
+      <footer class="footer clearfix">
+        <div class="content clearfix">
+          <div class="section clearfix">
+            <div class="block-item">
+              <div class="block-list">
+                <div class="block-list__title">О БАНКЕ</div>
+                <ul class="list">
+                  <li class="list__item"><a class="list__link" href="#">Тинькофф Банк</a></li>
+                  <li class="list__item"><a class="list__link" href="#">Новости</a></li>
+                  <li class="list__item"><a class="list__link" href="#">Вакансии</a></li>
+                  <li class="list__item"><a class="list__link" href="#">For Investors</a></li>
+                </ul>
+              </div>
+              <div class="block-list">
+                <div class="block-list__title">КАРТЫ</div>
+                <ul class="list">
+                  <li class="list__item"><a class="list__link" href="#">Кредитные карты</a></li>
+                  <li class="list__item"><a class="list__link" href="#">Дебетовые карты</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="block-item">
+              <div class="block-list">
+                <div class="block-list__title">СТРАХОВАНИЕ</div>
+                <ul class="list">
+                  <li class="list__item"><a class="list__link" href="#">Автомобиль</a></li>
+                  <li class="list__item"><a class="list__link" href="#">Жизнь и здоровье</a></li>
+                  <li class="list__item"><a class="list__link" href="#">Путешествия</a></li>
+                  <li class="list__item"><a class="list__link" href="#">Имущество</a></li>
+                </ul>
+              </div>
+              <div class="block-list">
+                <div class="block-list__title">ВКЛАДЫ</div>
+                <ul class="list">
+                  <li class="list__item"><a class="list__link" href="#">Ставки по вкладам</a></li>
+                  <li class="list__item"><a class="list__link" href="#">Тарифы</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="section clearfix">
+            <div class="cont clearfix"><a class="phone" href="tel:88005551122">8 800 555-11-22<span class="phone__subtitle">Для звонков по России</span></a><a class="btn-call" href="">Онлайн-звонок в банк</a></div>
+            <div class="social clearfix">
+              <ul class="social-list">
+                <li class="social-item"><a class="social-link social-link_vk" href="#"></a></li>
+                <li class="social-item"><a class="social-link social-link_fb" href="#"></a></li>
+                <li class="social-item"><a class="social-link social-link_tw" href="#"></a></li>
+                <li class="social-item"><a class="social-link social-link_ok" href="#"></a></li>
+                <li class="social-item"><a class="social-link social-link_google" href="#"></a></li>
+                <li class="social-item"><a class="social-link social-link_youtube" href="#"></a></li>
+              </ul>
+            </div>
+            <ul class="list-nav">
+              <li class="list-nav__item"><a class="list-nav__link" href="#">О БАНКЕ</a><a class="list-nav__link" href="#">КАРТЫ</a></li>
+              <li class="list-nav__item"><a class="list-nav__link" href="#">СТРАХОВАНИЕ</a><a class="list-nav__link" href="#">ВКЛАДЫ</a></li>
+            </ul>
+            <ul class="list list_align">
+              <li class="list__item list__item_inline"><a class="list__link" href="#">Курсы валют</a></li>
+              <li class="list__item list__item_inline"><a class="list__link" href="#">Мобильные приложения</a></li>
+              <li class="list__item list__item_inline"><a class="list__link" href="#">Карта сайта</a></li>
+              <li class="list__item list__item_inline"><a class="list__link" href="#">Информация о лицах, под контролем которых находится банк</a></li>
+            </ul>
+          </div>
+          <div class="disclaimer clearfix">
+            <div class="disclaimer-info">© 2006–2015, АО «Тинькофф Банк», официальный сайт, лицензия ЦБ РФ № 2673</div><a class="language" href="">English</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="static/js/jquery.js"></script>
+    <script src="static/js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="static/js/libs.min.js"></script>
+    <script src="static/js/select2.full.min.js"></script>
+    <script src="static/js/main.js"></script>
+  </body>
+</html>
