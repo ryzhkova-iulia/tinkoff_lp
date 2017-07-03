@@ -8686,6 +8686,9 @@ header {
 .menu__item:hover {
   border-bottom: 3px solid #ffdd2d;
 }
+select::-ms-expand {
+  display: none;
+}
 .banner {
   position: relative;
   background: -webkit-gradient(linear, left top, right top, from(#1489e7), to(#003e82));
