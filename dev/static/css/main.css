@@ -8643,7 +8643,7 @@ header {
 }
 .toggle {
   float: right;
-  margin-top: 15px;
+  margin-top: 13px;
   display: none;
   cursor: pointer;
   width: 25px;
@@ -8696,7 +8696,7 @@ header {
   color: #fff;
   padding: 83px 0;
   z-index: 100;
-  height: 373px;
+  height: 390px;
   overflow: hidden;
 }
 .banner:before {
@@ -8959,7 +8959,7 @@ header {
   font-size: 17px;
   color: #9299a2;
   display: block;
-  margin-top: 7px;
+  margin-top: 10px;
 }
 .tabs_cont {
   max-width: 540px;
@@ -9061,7 +9061,7 @@ header {
   cursor: pointer;
   position: absolute;
   right: 0;
-  top: 0;
+  top: -1px;
   content: "";
   z-index: 600;
 }
@@ -9088,7 +9088,7 @@ header {
      -moz-border-radius: 6px;
           border-radius: 6px;
   background-color: #eef2f7;
-  margin-top: 15px;
+  margin-top: 24px;
 }
 .form-fieled__title {
   position: absolute;
@@ -9198,6 +9198,39 @@ header {
   -webkit-box-sizing: content-box;
      -moz-box-sizing: content-box;
           box-sizing: content-box;
+}
+.error {
+  border: 1px solid #d0011b;
+}
+.error:before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background: url("../img/general/error.svg") no-repeat center;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  -webkit-transform: translate(0, -50%);
+     -moz-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+       -o-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+}
+.error:after {
+  font-size: 13px;
+  color: #d0021b;
+  content: "Для заполнения этого поля не допустимо использовать буквы латинского алфавита";
+  display: block;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -33px;
+}
+.error + div {
+  margin-top: 65px;
 }
 .footer {
   border-top: 1px solid #dddfe0;
@@ -9388,6 +9421,11 @@ header {
   color: #9299a2;
   margin-bottom: 16px;
 }
+@media screen and (min-width: 1300px) {
+  .banner:before {
+    left: 15%;
+  }
+}
 @media screen and (max-width: 992px) {
   .logo-mobile {
     display: block;
@@ -9402,6 +9440,7 @@ header {
     font-size: 17px;
     float: left;
     margin-top: 15px;
+    line-height: 17px;
   }
   .block-centre {
     width: -webkit-calc(50% + 60px);
@@ -9495,6 +9534,17 @@ header {
   }
   .content {
     padding: 0 18px;
+  }
+  .category {
+    width: 100%;
+  }
+  .tooltip {
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  .field__item {
+    line-height: 37px;
   }
 }
 @media screen and (max-width: 480px) {

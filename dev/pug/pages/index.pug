@@ -9,13 +9,13 @@ block content
     section.banner.clearfix
         .content
             .info
-                h1.main-title Карты для вас  прямо сейчас
-                span.subtitle Выбирайте карту, пользуйтесь <br> удобными сервисами
+                h1.main-title Карты для вас<br> прямо сейчас
+                span.subtitle Выбирайте карту, пользуйтесь<br>удобными сервисами
                 button.btn.btn_absolute Оформить заявку
     section.container
         .content.content_align
             .block
-                h2.block__title Любые категории  платежей
+                h2.block__title Любые категории платежей
                 select.category.js-category(multiple=true)
                     option(selected="true") Кафе
                     option(selected="true") Интернет
@@ -41,12 +41,13 @@ block content
                         span.field__title Тип продукта
                     div.field
                         textarea(placeholder="Желаемый размер кредита").field__item.field_textarea
+                        //span.area-title Желаемый размер кредита
                     button.btn Заполнить заявку
 
             .block
                 .block-border
-                    h2.block__title Все условия  для вас
-                    span.block__info Стоимость обслуживания и всю информацию  о кредитных картах  вы сможете найти  в договоре
+                    h2.block__title Все условия для вас
+                    span.block__info Стоимость обслуживания и всю информацию о кредитных картах вы сможете найти в договоре
                         .tooltip-icon
                         .tooltip
                             | Ваши данные замаскированы в целях безопасности. Для изменения информации с вами свяжется оператор колл-центра.
@@ -84,6 +85,9 @@ block content
                                 .row.clearfix
                                     .field
                                         input(type="text" placeholder="Сумма Р")
+                                    //.form-fieled
+                                    //    input(type="text" value="")
+                                    //    span.form-fieled__title ФИО
                                     button.btn Заполнить заявку
 
                         #tab_c2
@@ -114,7 +118,7 @@ block content
             .form-fieled
                 input(type="text" value="")
                 span.form-fieled__title ФИО
-            .form-fieled
+            .form-fieled.error
                 input(type="text")
                 span.form-fieled__title Город проживания
             .form-fieled
@@ -124,8 +128,8 @@ block content
                 input(type="text")
                 span.form-fieled__title Электронная почта
 
-            h3.checkbox-title Выберите это или другое
             .checkbox.clearfix
+                h3.checkbox-title Выберите это или другое
                 .block-input
                     label.block-input__label
                         input.block-input__radio(type="radio" checked="checked" name="radio")

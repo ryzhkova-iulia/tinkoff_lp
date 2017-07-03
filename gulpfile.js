@@ -30,7 +30,6 @@ gulp.task('stylus', function() {
     .on("error", notify.onError(function(error) {
             return "Message to the notifier: " + error.message;
         }))
-        // .pipe(autoprefixer(['last 2 version']))
         .pipe(autoprefixer({
 			browsers: ['> 0%', 'last 3 versions', 'Firefox >= 20', 'iOS >=7']
 		}))
