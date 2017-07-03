@@ -8872,7 +8872,7 @@ header {
   cursor: pointer;
   vertical-align: bottom;
 }
-.tooltip-icon:hover + .tooltip {
+.tooltip-icon:hover .tooltip {
   display: block;
 }
 .block-tab {
@@ -8919,7 +8919,7 @@ header {
   text-transform: uppercase;
   padding-bottom: 28px;
 }
-.tabs input {
+.tabs__input {
   position: absolute;
   left: -9999px;
 }
@@ -8982,21 +8982,6 @@ header {
   width: 49.8%;
   display: inline-block;
   margin-bottom: 30px;
-}
-.row .field input {
-  position: static;
-  float: left;
-  -webkit-border-radius: 6px;
-     -moz-border-radius: 6px;
-          border-radius: 6px;
-  border: solid 1px #dddfe0;
-  background-color: #eef2f7;
-  height: 66px;
-  font-size: 17px;
-  line-height: 1.35;
-  padding-top: 20px;
-  padding-left: 18px;
-  padding-right: 18px;
 }
 .row .field:first-child {
   float: left;
@@ -9114,6 +9099,13 @@ header {
   z-index: 90;
   background-color: transparent;
 }
+.form-fieled_select {
+  margin-top: 0;
+  padding: 23px;
+}
+.form-fieled_select .form-fieled__title {
+  color: #9299a2;
+}
 .form-fieled input:focus + .form-fieled__title,
 .form-fieled_has-content .form-fieled__title {
   top: 20%;
@@ -9201,6 +9193,7 @@ header {
 }
 .error {
   border: 1px solid #d0011b;
+  background-color: transparent;
 }
 .error:before {
   content: "";
@@ -9231,6 +9224,106 @@ header {
 }
 .error + div {
   margin-top: 65px;
+}
+.js-card {
+  width: 100%;
+  height: 66px;
+}
+.card.select2-container--default .select2-selection--single {
+  width: 100%;
+  height: 66px;
+  padding: 10px 0;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  border: solid 1px #dddfe0;
+  background-color: #eef2f7;
+}
+.card .select2-search.select2-search--dropdown {
+  display: none;
+}
+.card.select2-container .select2-selection--single .select2-selection__rendered {
+  padding-left: 18px;
+}
+.card .select2-results__option {
+  padding-left: 18px;
+  padding-right: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #dddfe0;
+}
+.card .select2-results__option:last-child {
+  border-bottom: none;
+}
+.card.select2-container--default .select2-selection--single .select2-selection__arrow {
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+     -moz-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+       -o-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  right: 5px;
+}
+.card.select2-container--default .select2-selection--single .select2-selection__arrow:after {
+  content: "";
+  width: 8px;
+  height: 10px;
+  display: inline-block;
+  background: url("../img/content/arrow.svg") no-repeat center;
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  -webkit-transform: translate(0, -50%);
+     -moz-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+       -o-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  z-index: 500;
+}
+.card.select2-container--default .select2-selection--single .select2-selection__arrow b {
+  display: none;
+}
+.card.select2-container--default .select2-results>.select2-results__options {
+  max-height: none;
+  overflow-y: inherit;
+}
+.card.select2-container--default .select2-results__option[aria-selected=true],
+.card.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: #f9fbfc;
+  color: #333;
+}
+.select-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+.select-item__content {
+  float: left;
+  text-align: left;
+}
+.select-item__content_single {
+  padding: 10px 0;
+}
+.select-item__title {
+  font-size: 17px;
+  color: #333;
+}
+.select-item__sub {
+  display: block;
+  font-size: 13px;
+  color: #9299a2;
+  line-height: 1;
+}
+.select-item__icon {
+  right: 10px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+     -moz-transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+       -o-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
 .footer {
   border-top: 1px solid #dddfe0;
@@ -9570,9 +9663,11 @@ header {
     background-color: #f6f7f8;
     padding: 33px 15px;
   }
-  .block-tab,
   .block-form {
     padding: 18px;
+  }
+  .block-tab {
+    padding: 50px 18px 18px;
   }
   .cont {
     text-align: center;

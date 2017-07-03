@@ -83,9 +83,10 @@
             <div class="block">
               <div class="block-border">
                 <h2 class="block__title">Все условия для вас</h2><span class="block__info">Стоимость обслуживания и всю информацию о кредитных картах вы сможете найти в договоре
-                  <div class="tooltip-icon"></div>
-                  <div class="tooltip">Ваши данные замаскированы в целях безопасности. Для изменения информации с вами свяжется оператор колл-центра.</div></span>
-              </div><a class="block__link" href="">ВСЕ УСЛОВИЯ</a>
+                  <div class="tooltip-icon">
+                    <div class="tooltip">Ваши данные замаскированы в целях безопасности. Для изменения информации с вами свяжется оператор колл-центра.</div>
+                  </div></span>
+              </div><a class="block__link" href="#">ВСЕ УСЛОВИЯ</a>
             </div>
           </div>
         </section>
@@ -93,10 +94,10 @@
           <div class="content">
             <div class="block-tab clearfix">
               <div class="tabs">
-                <input type="radio" id="tab_1" name="tab" checked="checked">
-                <input type="radio" id="tab_2" name="tab">
-                <input type="radio" id="tab_3" name="tab">
-                <input type="radio" id="tab_4" name="tab">
+                <input class="tabs__input" type="radio" id="tab_1" name="tab" checked="checked">
+                <input class="tabs__input" type="radio" id="tab_2" name="tab">
+                <input class="tabs__input" type="radio" id="tab_3" name="tab">
+                <input class="tabs__input" type="radio" id="tab_4" name="tab">
                 <div class="tabs__title">
                   <div class="tabs__title__inner">
                     <label for="tab_1">СЧЕТА НА ОПЛАТУ</label>
@@ -111,43 +112,24 @@
                     <form class="form-penalty">
                       <div class="row clearfix">
                         <div class="field">
-                          <select class="field__item">
-                            <option>Tinkoff Black</option>
-                          </select><span class="field__title">78 000 Р</span>
+                          <select class="js-card"></select>
                         </div>
                         <div class="field">
-                          <select class="field__item">
-                            <option>Штраф</option>
-                          </select><span class="field__title">Постановление №123456788</span>
+                          <select class="js-card"></select>
                         </div>
                       </div>
                       <div class="row clearfix">
                         <div class="field">
-                          <input type="text" placeholder="Сумма Р">
+                          <div class="form-fieled form-fieled_select">
+                            <input type="text" value=""><span class="form-fieled__title">Сумма Р</span>
+                          </div>
                         </div>
-                        <!--.form-fieled-->
-                        <!--    input(type="text" value="")-->
-                        <!--    span.form-fieled__title ФИО-->
                         <button class="btn">Заполнить заявку</button>
                       </div>
                     </form>
                   </div>
                   <div id="tab_c2">
-                    <h2 class="block__title">У вас два неоплаченных штрафа<span class="block__title__subtitle">Оплатите до 1 августа с 50% скидкой</span></h2>
-                    <form class="form-penalty">
-                      <div class="row clearfix">
-                        <div class="field">
-                          <select class="field__item">
-                            <option>Tinkoff Black</option>
-                          </select><span class="field__title">78 000 Р</span>
-                        </div>
-                        <div class="field">
-                          <select class="field__item">
-                            <option>Штраф</option>
-                          </select><span class="field__title">Постановление №123456788</span>
-                        </div>
-                      </div>
-                    </form>
+                    <h2 class="block__title">У вас два неоплаченных штрафа<span class="block__title__subtitle">tab 2</span></h2>
                   </div>
                   <div id="tab_c3">
                     <h2 class="block__title">У вас два неоплаченных штрафа<span class="block__title__subtitle">Оплатите до 1 августа с 50% скидкой</span></h2>

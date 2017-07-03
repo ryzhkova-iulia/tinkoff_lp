@@ -49,18 +49,18 @@ block content
                     h2.block__title Все условия для вас
                     span.block__info Стоимость обслуживания и всю информацию о кредитных картах вы сможете найти в договоре
                         .tooltip-icon
-                        .tooltip
-                            | Ваши данные замаскированы в целях безопасности. Для изменения информации с вами свяжется оператор колл-центра.
-                a(href="").block__link ВСЕ УСЛОВИЯ
+                            .tooltip
+                                | Ваши данные замаскированы в целях безопасности. Для изменения информации с вами свяжется оператор колл-центра.
+                a(href="#").block__link ВСЕ УСЛОВИЯ
 
     section
         .content
             .block-tab.clearfix
                 .tabs
-                    input(type="radio" id="tab_1" name="tab" checked="checked")
-                    input(type="radio" id="tab_2" name="tab")
-                    input(type="radio" id="tab_3" name="tab")
-                    input(type="radio" id="tab_4" name="tab")
+                    input(type="radio" id="tab_1" name="tab" checked="checked").tabs__input
+                    input(type="radio" id="tab_2" name="tab").tabs__input
+                    input(type="radio" id="tab_3" name="tab").tabs__input
+                    input(type="radio" id="tab_4" name="tab").tabs__input
                     .tabs__title
                         .tabs__title__inner
                             label(for='tab_1') СЧЕТА НА ОПЛАТУ
@@ -75,34 +75,23 @@ block content
                             form.form-penalty
                                 .row.clearfix
                                     .field
-                                        select.field__item
-                                            option Tinkoff Black
-                                        span.field__title 78 000 Р
+                                        select.js-card
+
                                     .field
-                                        select.field__item
-                                            option Штраф
-                                        span.field__title Постановление №123456788
+                                        select.js-card
+
                                 .row.clearfix
                                     .field
-                                        input(type="text" placeholder="Сумма Р")
-                                    //.form-fieled
-                                    //    input(type="text" value="")
-                                    //    span.form-fieled__title ФИО
+                                        .form-fieled.form-fieled_select
+                                            input(type="text" value="")
+                                            span.form-fieled__title Сумма Р
+
                                     button.btn Заполнить заявку
 
                         #tab_c2
                             h2.block__title У вас два неоплаченных штрафа
-                                span.block__title__subtitle Оплатите до 1 августа с 50% скидкой
-                            form.form-penalty
-                                .row.clearfix
-                                    .field
-                                        select.field__item
-                                            option Tinkoff Black
-                                        span.field__title 78 000 Р
-                                    .field
-                                        select.field__item
-                                            option Штраф
-                                        span.field__title Постановление №123456788
+                                span.block__title__subtitle tab 2
+
 
                         #tab_c3
                             h2.block__title У вас два неоплаченных штрафа
